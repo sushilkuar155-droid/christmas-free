@@ -76,3 +76,17 @@ body.main-body {
 }
 .front { background: #fff; color: #333; }
 .back { background: #ffccd5; color: #ff4d6d; transform: rotateY(180deg); }
+body::before {
+    content: "❄";
+    position: fixed;
+    top: -10%;
+    left: 10%;
+    color: white;
+    font-size: 20px;
+    animation: snow 5s linear infinite;
+    opacity: 0.5;
+}
+
+@keyframes snow {
+    to { transform: translateY(110vh); }
+}
