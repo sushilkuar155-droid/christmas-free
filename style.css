@@ -77,17 +77,27 @@ body {
     align-items: center;
     border-radius: 15px;
     padding: 15px;
-}
-
-.card-front { background: white; color: #333; }
-.card-back { background: #ffccd5; color: #ff4d6d; transform: rotateY(180deg); }
-/* Snowfall Effect */
+/* Better Snowfall Effect */
 body::after {
-    content: "❄ ❅ ❄ ❆ ❄";
+    content: "❄ ❅ ❆ ❄ ❅ ❆";
     position: fixed;
     top: -10%;
     left: 0;
     width: 100%;
+    color: white;
+    font-size: 28px;
+    animation: snow 8s linear infinite;
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: 1000;
+    white-space: nowrap;
+}
+
+@keyframes snow {
+    0% { transform: translateY(0) translateX(0); }
+    100% { transform: translateY(110vh) translateX(20px); }
+}
+    
     color: white;
     font-size: 24px;
     animation: snow 10s linear infinite;
