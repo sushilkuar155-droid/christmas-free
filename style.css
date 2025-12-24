@@ -81,3 +81,20 @@ body {
 
 .card-front { background: white; color: #333; }
 .card-back { background: #ffccd5; color: #ff4d6d; transform: rotateY(180deg); }
+/* Snowfall Effect */
+body::after {
+    content: "❄ ❅ ❄ ❆ ❄";
+    position: fixed;
+    top: -10%;
+    left: 0;
+    width: 100%;
+    color: white;
+    font-size: 24px;
+    animation: snow 10s linear infinite;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+@keyframes snow {
+    to { transform: translateY(110vh); }
+}
