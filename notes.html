@@ -1,26 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Christmas Notes 💖</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Surprise 🎁</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="container">
-    <h1>Little Christmas Notes 💖</h1>
-<p style="font-size:20px;">Hey[my darling nishu],/p>
-    <div class="notes">
-      <div class="note">You make winter feel warmer ☕❄️</div>
-      <div class="note">Your smile beats Christmas lights ✨</div>
-      <div class="note">Best gift this season? You 🎁</div>
-      <div class="note">May joy follow you like snowflakes ❄️</div>
+<body class="notes-body">
+    <div id="game-container" class="game-container">
+        <p class="game-header">A quick game first...</p>
+        <h2 class="game-title">Sweet Tic-Tac-Toe 🍭</h2>
+        <div class="board" id="board">
+            <div class="cell">🍫</div><div class="cell">🍭</div><div class="cell">🍬</div>
+            <div class="cell">🍩</div><div class="cell" id="center-cell"></div><div class="cell">🧁</div>
+            <div class="cell">🍫</div><div class="cell">🍭</div><div class="cell">🍬</div>
+        </div>
+        <p class="instruction">PLACE THE COOKIE TO CONTINUE</p>
+        <button class="cookie-btn" onclick="placeCookie()">🍪 Tap to Place Cookie</button>
     </div>
 
-    <br /><br />
-    <a href="gallery.html" class="button">View Gallery 🎅</a>
-  </div>
+    <div id="notes-section" style="display:none;">
+        <h2 class="note-header">Little Things I Want You To Know 🎄</h2>
+        <div class="card-container">
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">Tap to unwrap 🎁</div>
+                    <div class="card-back">You make everything feel warmer 🤍</div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <button class="cookie-btn" onclick="location.reload()">Restart 🔄</button>
+    </div>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
